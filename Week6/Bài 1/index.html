@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Nhà hàng Tum Royal</title>
+  <meta name="description" content="Nhà hàng Tum Royal - Ẩm thực Việt Nam">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nhà hàng Tum Royal</h1>
+    <nav>
+      <a href="#">Trang chủ</a> |
+      <a href="#">Thực đơn</a> |
+      <a href="#">Đặt bàn</a> |
+      <a href="#">Liên hệ</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section>
+      <h2>Chào mừng đến với Tum Royal</h2>
+      <p>
+        Nhà hàng Tum Royal tự hào mang đến cho bạn những trải nghiệm ẩm thực tuyệt vời 
+        với các món ăn đặc sắc và không gian sang trọng.
+      </p>
+    </section>
+
+    <!-- Thanh tìm kiếm -->
+    <section>
+        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+        <button id="searchBtn">Tìm</button>
+        <button id="addProductBtn">Thêm sản phẩm</button>
+    </section>
+
+    <section id="product-list">
+      <article class="product-item">
+        <h3 class="product-name">Phở Bò</h3>
+        <img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/2024_1_26_638418715174070559_pho-bo-anh-dai-dien.jpg" 
+            alt="Phở Bò" width="300" height="200">
+        <p>Phở truyền thống với nước dùng đậm đà.</p>
+        <p class="price"><strong>Giá:</strong> 50.000₫</p>
+      </article>
+
+      <article class="product-item">
+        <h3 class="product-name">Bún Chả</h3>
+        <img src="https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/2024_1_13_638407567967930759_tong-hop-cac-cach-an-bun-cha-ha-noi-chuan-4.png" 
+            alt="Bún Chả" width="300" height="200">
+        <p>Bún chả Hà Nội, thịt nướng thơm ngon.</p>
+        <p class="price"><strong>Giá:</strong> 45.000₫</p>
+      </article>
+
+      <article class="product-item">
+        <h3 class="product-name">Nem Rán</h3>
+        <img src="https://cdn.tgdd.vn/2022/10/CookDishThumb/cach-lam-mon-nem-ran-thom-ngon-chuan-vi-don-gian-tai-nha-thumb-620x620.jpg" 
+            alt="Nem Rán" width="300" height="200">
+        <p>Nem vàng giòn rụm, ăn kèm rau sống.</p>
+        <p class="price"><strong>Giá:</strong> 40.000₫</p>
+      </article>
+
+      <article class="product-item">
+        <h3 class="product-name">Cơm Tấm</h3>
+        <img src="https://statics.vinpearl.com/com-tam-ha-noi-1_1692527283.jpg" 
+            alt="Cơm Tấm" width="300" height="200">
+        <p>Cơm tấm sườn bì chả trứng.</p>
+        <p class="price"><strong>Giá:</strong> 55.000₫</p>
+      </article>
+    </section>
+  </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-form">
+          <h3>Đặt bàn ngay hôm nay!</h3>
+          <form id="bookingForm">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="date">Ngày đặt bàn:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Thời gian:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Số lượng khách:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+
+            <button type="submit">Đặt bàn</button>
+          </form>
+        </div>
+
+        <div class="footer-info">
+          <p>&copy; 2025 Nhà hàng Tum Royal. All rights reserved.</p>
+          <p>Địa chỉ: 123 Đường Ẩm Thực, Quận Thiên Đường, TP Cực Lạc</p>
+          <p>Điện thoại: +84 999 999 999</p>
+        </div>
+      </div>
+    </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
