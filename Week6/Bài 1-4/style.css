@@ -1,0 +1,170 @@
+head {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(156, 206, 229);
+}
+
+nav {
+    background-color: #242d36;
+    color: white;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 30px;
+    text-decoration: none;
+}
+
+#product-list {
+  display: flex;
+  flex-wrap: wrap;   /* Cho xuống hàng khi thiếu chỗ */
+  gap: 20px;         /* Khoảng cách giữa các sản phẩm */
+  padding: 20px;
+  justify-content: center; /* căn giữa toàn bộ */
+}
+
+.product-item {
+  width: 320px;           /* cố định khung sản phẩm */
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  background: #fafafa;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Định dạng bên trong sản phẩm */
+.product-item h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.product-item p {
+  margin: 5px 0;
+}
+.product-item .price {
+  color: #d43f3a;   /* Giá nổi bật (đỏ) */
+  font-weight: bold;
+}
+.product-item img {
+  width: 300px;       /* giữ cố định chiều rộng */
+  height: 200px;      /* giữ cố định chiều cao */
+  object-fit: cover;  /* ảnh lấp đầy khung mà không méo */
+  border-radius: 4px;
+  margin: 0 auto 10px auto; /* căn giữa ảnh trong khung */
+  display: block;
+}
+
+
+
+footer {
+  background-color: #242d36;
+  color: #ddd;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Dùng flex để form và info đứng cạnh nhau */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* cho dính trên cùng */
+  gap: 40px; /* khoảng cách giữa form và info */
+}
+
+/* Form gọn, không center */
+.footer-form {
+  flex: 1;
+  max-width: 350px;
+}
+
+.footer-form h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Input */
+.footer-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Button */
+button {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover: đổi màu + tụt lên nhẹ */
+button:hover {
+  background-color: #d62839;
+  transform: translateY(-3px); /* tụt lên 3px */
+}
+
+/* Thông tin footer */
+.footer-info {
+  flex: 1;
+}
+.footer-info p {
+  margin: 6px 0;
+}
+
+
+/* 17. Responsive khi màn hình nhỏ hơn 600px */
+@media (max-width: 600px) {
+  /* Danh sách sản phẩm: 1 cột */
+  #product-list {
+    flex-direction: column;
+  }
+  .product-item {
+    flex: 1 1 100%;
+  }
+
+  /* Menu chuyển thành dọc */
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start; /* dính về bên trái */
+  }
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  /* Form trong footer: xuống hàng */
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* 18. Đảm bảo ảnh co giãn */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.hidden {
+  display: none;
+}
